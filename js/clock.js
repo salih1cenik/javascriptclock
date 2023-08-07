@@ -1,10 +1,7 @@
-var tarih = new Date();
-var yil = tarih.getFullYear();
-var ay = tarih.getMonth();
-var gun = tarih.getDay();
-var saat = tarih.getHours();
-var dakika = tarih.getMinutes();
-var saniye = tarih.getSeconds();
-let myClock = document.querySelector("#myClock");
-myClock.innerHTML =
-  gun + "/" + ay + "/" + yil + " " + saat + ":" + dakika + ":" + saniye;
+function tarihSaat() {
+  var date = new Date().toLocaleString('tr-TR');
+  document.getElementById("myClock").innerHTML = date;
+}
+// her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
+setInterval(tarihSaat, 1000);
+myClock.innerHTML =tarihSaat();
